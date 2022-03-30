@@ -3557,6 +3557,11 @@
   dependencies:
     "makeerror" "1.0.x"
 
+"wasm-vips@^0.0.1":
+  "integrity" "sha512-w9UgDR55SoUN0NKlm8Szj6ss9A57FEt4cQb7RoqJbXOW/uV3sszMJJvzwJ3mOp4U57vwZ4pBbvMQPOdQENhr5g=="
+  "resolved" "https://registry.npmjs.org/wasm-vips/-/wasm-vips-0.0.1.tgz"
+  "version" "0.0.1"
+
 "watchpack@^2.2.0":
   "integrity" "sha512-up4YAn/XHgZHIxFBVCdlMiWDj6WaLKpwVeGQk2I5thdYxF/KmF0aaz6TfJZ/hfl1h/XlcDr7k1KH7ThDagpFaA=="
   "resolved" "https://registry.npmjs.org/watchpack/-/watchpack-2.2.0.tgz"

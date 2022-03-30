@@ -45,7 +45,17 @@ const ImageResizer = async (req: RequestWithQuery): Promise<Response> => {
     return new Response('Disallowed file extension', {status: 400})
   }
 
-  return fetch(src, options)
+  const response = await fetch(src, options)
+
+  if(!response.ok) {
+    return new Response("Error resizing image", {
+      status: 400
+    })
+  }
+
+  return new Response("Error resizing image", {
+    status: 400
+  })
 }
 
 export default ImageResizer
