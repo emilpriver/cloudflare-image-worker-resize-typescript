@@ -22,6 +22,7 @@
     "@cloudflare/workers-types": "^3.0.0",
     "@types/jest": "^26.0.23",
     "@types/service-worker-mock": "^2.0.1",
+    "@types/sharp": "^0.30.0",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
@@ -37,6 +38,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "itty-router": "^2.6.1"
+    "itty-router": "^2.6.1",
+    "sharp": "^0.30.3"
   }
 }

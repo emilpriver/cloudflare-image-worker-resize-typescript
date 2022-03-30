@@ -1,13 +1,13 @@
 import { Router } from 'itty-router'
+import ImageResizer from "./routes/resize";
+import {IMethods} from "./types";
 
-const router = Router()
+const router = Router<Request, IMethods>()
 
-router.get("/resize", () => {
-  return new Response("Hello, world! This is the root page of your Worker template.")
-})
+router.get("/resize", ImageResizer)
 
 router.all("*", () => new Response("404, not found!", { status: 404 }))
 
-addEventListener('fetch', (e) => {
-  e.respondWith(router.handle(e.request))
+addEventListener('fetch', (event: FetchEvent) => {
+  event.respondWith(router.handle(event.request))
 })
