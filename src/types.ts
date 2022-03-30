@@ -1,4 +1,4 @@
-import {Obj, Request, Route} from "itty-router";
+import {Obj, Route} from "itty-router";
 
 export type MethodType = 'GET'
 
@@ -13,8 +13,8 @@ export interface IMethods {
   get: Route
 }
 
-export type ImageResizeQuery = {
+export type ImageResizeQuery = Obj & {
   src: string
-  q: string
-  w: string
+  q: number
+  w: number
 }

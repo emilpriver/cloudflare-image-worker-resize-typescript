@@ -9,5 +9,9 @@ router.get("/resize", ImageResizer)
 router.all("*", () => new Response("404, not found!", { status: 404 }))
 
 addEventListener('fetch', (event: FetchEvent) => {
+  if (event?.request?.headers?.get("via") && /image-resizing/.test(event.request.headers.get("via") as string)) {
+    return fetch(event.request)
+  }
+
   event.respondWith(router.handle(event.request))
 })

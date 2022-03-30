@@ -13,9 +13,13 @@
     "types": [
       "@cloudflare/workers-types",
       "@types/jest",
-      "@types/service-worker-mock"
+      "@types/service-worker-mock",
+      "@types/node"
     ]
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    "node_modules/@types/node/buffer.d.ts"
+  ],
   "exclude": ["node_modules", "dist", "test"]
 }
